@@ -67,7 +67,7 @@ class BlockController extends Controller
      */
     public function show(Block $block)
     {
-        //
+        return response()->json($block);
     }
 
     /**

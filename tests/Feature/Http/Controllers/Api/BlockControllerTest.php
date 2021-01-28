@@ -60,6 +60,26 @@ class BlockControllerTest extends TestCase
     }
 
     /**
+     * Show block test.
+     *
+     * @return void
+     */
+    public function test_show()
+    {
+        $block = Block::factory()->create();
+
+        $response = $this->getJson("/api/blocks/$block->id");
+
+        $response->assertJsonStructure(['id', 'person_id', 'building_id'])
+            ->assertJson([
+                'id' => $block->id,
+                'person_id' => $block->person_id,
+                'building_id' => $block->building_id,
+            ])
+            ->assertStatus(200);
+    }
+
+    /**
      * Update access test.
      *
      * @return void

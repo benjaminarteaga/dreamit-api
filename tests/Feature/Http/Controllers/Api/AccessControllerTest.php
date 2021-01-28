@@ -72,6 +72,27 @@ class AccessControllerTest extends TestCase
     }
 
     /**
+     * Show access test.
+     *
+     * @return void
+     */
+    public function test_show()
+    {
+        $access = Access::factory()->create();
+
+        $response = $this->getJson("/api/accesses/$access->id");
+
+        $response->assertJsonStructure(['person_id', 'building_id', 'access_type_id',])
+            ->assertJson([
+                'id' => $access->id,
+                'person_id' => $access->person_id,
+                'building_id' => $access->building_id,
+                'access_type_id' => $access->access_type_id,
+            ])
+            ->assertStatus(200);
+    }
+
+    /**
      * Update access test.
      *
      * @return void

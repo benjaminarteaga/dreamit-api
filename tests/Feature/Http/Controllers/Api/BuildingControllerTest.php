@@ -55,6 +55,26 @@ class BuildingControllerTest extends TestCase
     }
 
     /**
+     * Show building test.
+     *
+     * @return void
+     */
+    public function test_show()
+    {
+        $building = Building::factory()->create();
+
+        $response = $this->getJson("/api/buildings/$building->id");
+
+        $response->assertJsonStructure(['id', 'name', 'address'])
+            ->assertJson([
+                'id' => $building->id,
+                'name' => $building->name,
+                'address' => $building->address,
+            ])
+            ->assertStatus(200);
+    }
+
+    /**
      * Update building test.
      *
      * @return void

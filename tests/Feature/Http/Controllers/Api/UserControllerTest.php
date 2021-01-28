@@ -62,6 +62,26 @@ class UserControllerTest extends TestCase
     }
 
     /**
+     * Show user test.
+     *
+     * @return void
+     */
+    public function test_show()
+    {
+        $user = User::factory()->create();
+
+        $response = $this->getJson("/api/users/$user->id");
+
+        $response->assertJsonStructure(['id', 'name', 'email'])
+            ->assertJson([
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+            ])
+            ->assertStatus(200);
+    }
+
+    /**
      * Update user test.
      *
      * @return void

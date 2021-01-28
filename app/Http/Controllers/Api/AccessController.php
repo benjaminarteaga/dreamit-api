@@ -81,7 +81,7 @@ class AccessController extends Controller
      */
     public function show(Access $access)
     {
-        //
+        return response()->json($access);
     }
 
     /**

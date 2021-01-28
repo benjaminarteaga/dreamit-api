@@ -51,7 +51,7 @@ class BuildingController extends Controller
      */
     public function show(Building $building)
     {
-        //
+        return response()->json($building);
     }
 
     /**

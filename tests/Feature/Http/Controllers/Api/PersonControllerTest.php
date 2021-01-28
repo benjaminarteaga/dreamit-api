@@ -59,6 +59,28 @@ class PersonControllerTest extends TestCase
     }
 
     /**
+     * Show person test.
+     *
+     * @return void
+     */
+    public function test_show()
+    {
+        $person = Person::factory()->create();
+
+        $response = $this->getJson("/api/persons/$person->id");
+
+        $response->assertJsonStructure(['id', 'first_name', 'last_name', 'rut', 'person_role_id'])
+            ->assertJson([
+                'id' => $person->id,
+                'first_name' => $person->first_name,
+                'last_name' => $person->last_name,
+                'rut' => $person->rut,
+                'person_role_id' => $person->person_role_id,
+            ])
+            ->assertStatus(200);
+    }
+
+    /**
      * Update person test.
      *
      * @return void
