@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\PersonController;
 use App\Http\Controllers\Api\BuildingController;
 use App\Http\Controllers\Api\AccessController;
 use App\Http\Controllers\Api\BlockController;
+use App\Http\Controllers\Api\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::resource('buildings', BuildingController::class);
 Route::resource('accesses', AccessController::class);
 
 Route::resource('blocks', BlockController::class);
+
+Route::resource('users', UserController::class);
