@@ -6,6 +6,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\Block;
+use App\Models\Person;
+use App\Models\Building;
 
 class BlockControllerTest extends TestCase
 {
@@ -37,34 +39,24 @@ class BlockControllerTest extends TestCase
      */
     public function test_store()
     {
-        $person = Person::all()->random();
-        $building = Building::all()->random();
-        $access_type = AccessType::all()->random();
+        $person = Person::factory()->create();
+        $building = Building::factory()->create();
 
-        $access = [
-            'building_id' => $building->id,
-            'access_type_id' => $access_type->id
+        $data = [
+            'person_id' => $person->id,
+            'building_id' => $building->id
         ];
-
-        $data = array_merge([
-            'first_name' => $person->first_name,
-            'last_name' => $person->last_name,
-            'rut' => $person->rut,
-            'person_role_id' => $person->person_role_id
-        ], $access);
 
         $response = $this->postJson('/api/blocks', $data);
 
-        $access['person_id'] = $person->id;
-
         $response->assertJsonStructure([
                 'message',
-                'access' => ['person_id', 'building_id', 'access_type_id',]
+                'block' => ['person_id', 'building_id',]
             ])
-            ->assertJson(['access' => $access])
+            ->assertJson(['block' => $data])
             ->assertStatus(200);
 
-        $this->assertDatabaseHas('blocks', $access);
+        $this->assertDatabaseHas('blocks', $data);
     }
 
     /**
@@ -74,23 +66,22 @@ class BlockControllerTest extends TestCase
      */
     public function test_update()
     {
-        $access = Access::factory()->create();
-        $fakeAccess = [
+        $block = Block::factory()->create();
+        $fakeBlock = [
             'person_id' => Person::all()->random()->id,
-            'building_id' => Building::all()->random()->id,
-            'access_type_id' => AccessType::all()->random()->id
+            'building_id' => Building::all()->random()->id
         ];
 
-        $response = $this->patchJson("/api/blocks/$access->id", $fakeAccess);
+        $response = $this->patchJson("/api/blocks/$block->id", $fakeBlock);
 
         $response->assertJsonStructure([
                 'message',
-                'access' => ['person_id', 'building_id', 'access_type_id',]
+                'block' => ['person_id', 'building_id',]
             ])
-            ->assertJson(['access' => $fakeAccess])
+            ->assertJson(['block' => $fakeBlock])
             ->assertStatus(200);
 
-        $this->assertDatabaseHas('blocks', $fakeAccess);
+        $this->assertDatabaseHas('blocks', $fakeBlock);
     }
 
     /**
@@ -100,7 +91,7 @@ class BlockControllerTest extends TestCase
      */
     public function test_delete()
     {
-        $access = Access::factory()->create();
+        $access = Block::factory()->create();
 
         $response = $this->deleteJson("/api/blocks/$access->id");
 

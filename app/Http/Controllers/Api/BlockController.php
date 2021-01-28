@@ -45,15 +45,18 @@ class BlockController extends Controller
             return response()->json([
                 'message' => 'Bloqueo registrado previamente',
                 'block' => $block->first()
-            ]);
+            ], 422);
         }
 
-        Block::create([
+        $block = Block::create([
             'person_id' => $request->person_id,
             'building_id' => $request->building_id
         ]);
 
-        return response(['message' => 'Bloqueo registrado.']);
+        return response()->json([
+            'message' => 'Bloqueo registrado.',
+            'block' => $block
+        ]);
     }
 
     /**
@@ -87,7 +90,14 @@ class BlockController extends Controller
      */
     public function update(Request $request, Block $block)
     {
-        //
+        $block->update([
+            'person_id' => $request->person_id,
+            'building_id' => $request->building_id,
+        ]);
+        return response()->json([
+            'message' => 'Registro de bloqueo actualizado exitosamente.',
+            'block' => $block
+        ]);
     }
 
     /**
@@ -98,7 +108,7 @@ class BlockController extends Controller
      */
     public function destroy(Block $block)
     {
-        Block::delete();
+        $block->delete();
         return response()->json(['message' => 'Bloqueo eliminadao.']);
     }
 }
