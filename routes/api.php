@@ -2,6 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\PersonController;
+use App\Http\Controllers\Api\BuildingController;
+use App\Http\Controllers\Api\AccessController;
+use App\Http\Controllers\Api\BlockController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +21,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('persons', PersonController::class);
+
+Route::resource('buildings', BuildingController::class);
+
+Route::resource('accesses', AccessController::class);
+
+Route::resource('blocks', BlockController::class);
