@@ -28,3 +28,9 @@ En la raíz del proyecto ejecutar el siguiente comando para levantar el server:
 Se puede visualizar la documentación de la API en la siguiete URL:
 
 	http://localhost:8000/docs
+
+## Testing
+
+Para correr los test:
+
+	php artisan test
