@@ -6,7 +6,7 @@ API de Dreamit para el control de acceso de personas en edificios.
 
 	git clone https://github.com/benjaminarteaga/dreamit-api.git
 	cd dreamit-api
-	cp .env-example .env
+	cp .env.example .env
 	composer install
 
 ## Configuración
@@ -40,3 +40,9 @@ Para correr los test:
 Para probar los endpoints desde la API, se puede usar esta colección (importarla como Link):
 
 	https://www.getpostman.com/collections/09eb4f3818261fb3ff75
+
+## Refrescar datos de la BD (opcional)
+
+Si se desean volver al punto inicial de la BD, correr el siguiente comando:
+
+	php artisan migrate:fresh --seed
