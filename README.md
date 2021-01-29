@@ -27,7 +27,9 @@ En la raíz del proyecto ejecutar el siguiente comando para levantar el server:
 
 Se puede visualizar la documentación de la API en la siguiete URL:
 
-	http://localhost:8000/docs
+[http://localhost:8000/docs](http://localhost:8000/docs)
+
+O tambien en la URL en que se disponibilice la aplicación, tomar en cuenta el endpoint `/docs`
 
 ## Testing
 
@@ -39,7 +41,7 @@ Para correr los test:
 
 Para probar los endpoints desde la API, se puede usar esta colección (importarla como Link):
 
-	https://www.getpostman.com/collections/09eb4f3818261fb3ff75
+[https://www.getpostman.com/collections/09eb4f3818261fb3ff75](https://www.getpostman.com/collections/09eb4f3818261fb3ff75)
 
 ## Refrescar datos de la BD (opcional)
 
