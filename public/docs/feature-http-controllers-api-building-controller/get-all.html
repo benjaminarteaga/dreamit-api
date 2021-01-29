@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Dreamit API Documentación</title>
+    <link rel="stylesheet" href="/docs/assets/css/app.css?0.2.0">
+</head>
+<body class="bg-gray-900 overflow-hidden flex absolute">
+
+    <div class="w-screen h-screen block  overflow-hidden top-0 ">
+        <div class="h-screen flex overflow-hidden bg-gray-100" x-data="{open: false}">
+    <div >
+        <div x-show="open" x-cloak class="fixed inset-0 flex z-40">
+            <div x-show="open" x-cloak class="fixed inset-0"
+                 x-transition:enter="transition-opacity ease-linear duration-300"
+                 xtransition:enter-start="opacity-0"
+                 x-transition:enter-end="opacity-100"
+                 x-transition:leave="transition-opacity ease-linear duration-300"
+                 x-transition:leave-start="opacity-100"
+                 x-transition:leave-end="opacity-0"
+            >
+                <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
+            </div>
+            <div x-show="open" x-cloak
+                 x-transition:enter="transition ease-in-out duration-300 transform"
+                 xtransition:enter-start="-translate-x-full"
+                 x-transition:enter-end="translate-x-0"
+                 x-transition:leave="transition ease-in-out duration-300 transform"
+                 x-transition:leave-start="translate-x-0"
+                 x-transition:leave-end="-translate-x-full"
+                 class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-gray-800">
+                <div class="absolute top-0 right-0 -mr-14 p-1">
+                    <button x-on:click="open = !open" class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600" aria-label="Close sidebar">
+                        <svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-shrink-0 flex items-center px-4">
+                    <span class="rounded-full text-teal-800 bg-teal-500 p-1">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </span>
+                    <span class="font-bold text-gray-100 text-2xl pl-4">Enlighten</span>
+                </div>
+                <div class="mt-5 flex-1 h-0 overflow-y-auto">
+                    <nav class="px-2 space-y-1">
+                        
+                                                    <a href="/docs/areas/feature.html" class=" group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                                <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                                Features
+                            </a>
+                                                            <div class="flex flex-col space-y-2" x-data="{open: false}">
+                                    <button
+                                        x-on:click="open = !open"
+                                        type="button" name="toggle panel"
+                                            class="group flex w-full text-left items-center px-2 py-1 text-sm leading-6 font-light rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                                        Users
+                                    </button>
+                                    <div class="w-full" x-cloak x-show="open">
+                                                                                    <a href="/docs/feature-http-controllers-api-user-controller.html"
+                                               class="group flex items-center px-4 py-1 text-sm leading-6 font-light rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                                                User Controller
+                                            </a>
+                                                                            </div>
+                                </div>
+                                                            <div class="flex flex-col space-y-2" x-data="{open: false}">
+                                    <button
+                                        x-on:click="open = !open"
+                                        type="button" name="toggle panel"
+                                            class="group flex w-full text-left items-center px-2 py-1 text-sm leading-6 font-light rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                                        Persons
+                                    </button>
+                                    <div class="w-full" x-cloak x-show="open">
+                                                                                    <a href="/docs/feature-http-controllers-api-person-controller.html"
+                                               class="group flex items-center px-4 py-1 text-sm leading-6 font-light rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                                                Person Controller
+                                            </a>
+                                                                            </div>
+                                </div>
+                                                            <div class="flex flex-col space-y-2" x-data="{open: false}">
+                                    <button
+                                        x-on:click="open = !open"
+                                        type="button" name="toggle panel"
+                                            class="group flex w-full text-left items-center px-2 py-1 text-sm leading-6 font-light rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                                        Buildings
+                                    </button>
+                                    <div class="w-full" x-cloak x-show="open">
+                                                                                    <a href="/docs/feature-http-controllers-api-building-controller.html"
+                                               class="group flex items-center px-4 py-1 text-sm leading-6 font-light rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                                                Building Controller
+                                            </a>
+                                                                            </div>
+                                </div>
+                                                            <div class="flex flex-col space-y-2" x-data="{open: false}">
+                                    <button
+                                        x-on:click="open = !open"
+                                        type="button" name="toggle panel"
+                                            class="group flex w-full text-left items-center px-2 py-1 text-sm leading-6 font-light rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                                        Accesses
+                                    </button>
+                                    <div class="w-full" x-cloak x-show="open">
+                                                                                    <a href="/docs/feature-http-controllers-api-access-controller.html"
+                                               class="group flex items-center px-4 py-1 text-sm leading-6 font-light rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                                                Access Controller
+                                            </a>
+                                                                            </div>
+                                </div>
+                                                            <div class="flex flex-col space-y-2" x-data="{open: false}">
+                                    <button
+                                        x-on:click="open = !open"
+                                        type="button" name="toggle panel"
+                                            class="group flex w-full text-left items-center px-2 py-1 text-sm leading-6 font-light rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                                        Blocks
+                                    </button>
+                                    <div class="w-full" x-cloak x-show="open">
+                                                                                    <a href="/docs/feature-http-controllers-api-block-controller.html"
+                                               class="group flex items-center px-4 py-1 text-sm leading-6 font-light rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                                                Block Controller
+                                            </a>
+                                                                            </div>
+                                </div>
+                                                                        </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col w-0 flex-1 overflow-hidden">
+        <div class="relative z-10 flex-shrink-0 flex h-16 bg-white shadow">
+            <button x-on:click="open = ! open" class="px-4 border-r border-gray-700 text-gray-500 focus:outline-none bg-gray-900 focus:bg-gray-800 focus:text-gray-600" aria-label="Open sidebar">
+                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+            </button>
+            <div class="flex-1 px-4 space-x-4 flex justify-end items-center bg-gray-800">
+                <span class="rounded-full text-teal-100 bg-teal-500 p-1  hidden md:flex">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </span>
+                                                            <div run="{&quot;id&quot;:1,&quot;branch&quot;:&quot;master&quot;,&quot;head&quot;:&quot;4ff7cd9&quot;,&quot;modified&quot;:1,&quot;created_at&quot;:&quot;2021-01-29T10:49:20.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-01-29T10:49:20.000000Z&quot;,&quot;groups&quot;:[{&quot;id&quot;:1,&quot;run_id&quot;:1,&quot;class_name&quot;:&quot;Tests\\Feature\\Http\\Controllers\\Api\\AccessControllerTest&quot;,&quot;title&quot;:&quot;Access Controller&quot;,&quot;slug&quot;:&quot;feature-http-controllers-api-access-controller&quot;,&quot;description&quot;:null,&quot;area&quot;:&quot;feature&quot;,&quot;order_num&quot;:9999,&quot;created_at&quot;:&quot;2021-01-29T10:49:20.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-01-29T10:49:20.000000Z&quot;},{&quot;id&quot;:2,&quot;run_id&quot;:1,&quot;class_name&quot;:&quot;Tests\\Feature\\Http\\Controllers\\Api\\BlockControllerTest&quot;,&quot;title&quot;:&quot;Block Controller&quot;,&quot;slug&quot;:&quot;feature-http-controllers-api-block-controller&quot;,&quot;description&quot;:null,&quot;area&quot;:&quot;feature&quot;,&quot;order_num&quot;:9999,&quot;created_at&quot;:&quot;2021-01-29T10:49:21.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-01-29T10:49:21.000000Z&quot;},{&quot;id&quot;:3,&quot;run_id&quot;:1,&quot;class_name&quot;:&quot;Tests\\Feature\\Http\\Controllers\\Api\\BuildingControllerTest&quot;,&quot;title&quot;:&quot;Building Controller&quot;,&quot;slug&quot;:&quot;feature-http-controllers-api-building-controller&quot;,&quot;description&quot;:null,&quot;area&quot;:&quot;feature&quot;,&quot;order_num&quot;:9999,&quot;created_at&quot;:&quot;2021-01-29T10:49:22.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-01-29T10:49:22.000000Z&quot;},{&quot;id&quot;:4,&quot;run_id&quot;:1,&quot;class_name&quot;:&quot;Tests\\Feature\\Http\\Controllers\\Api\\PersonControllerTest&quot;,&quot;title&quot;:&quot;Person Controller&quot;,&quot;slug&quot;:&quot;feature-http-controllers-api-person-controller&quot;,&quot;description&quot;:null,&quot;area&quot;:&quot;feature&quot;,&quot;order_num&quot;:9999,&quot;created_at&quot;:&quot;2021-01-29T10:49:22.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-01-29T10:49:22.000000Z&quot;},{&quot;id&quot;:5,&quot;run_id&quot;:1,&quot;class_name&quot;:&quot;Tests\\Feature\\Http\\Controllers\\Api\\UserControllerTest&quot;,&quot;title&quot;:&quot;User Controller&quot;,&quot;slug&quot;:&quot;feature-http-controllers-api-user-controller&quot;,&quot;description&quot;:null,&quot;area&quot;:&quot;feature&quot;,&quot;order_num&quot;:9999,&quot;created_at&quot;:&quot;2021-01-29T10:49:23.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-01-29T10:49:23.000000Z&quot;}]}" class="hidden md:flex relative flex-1"
+     x-data='{
+         open: true,
+         results: [],
+         index: {}
+    }'
+     x-on:data-loaded="index = $event.detail"
+     x-init="
+        fetch('/docs/search.json')
+            .then(response => response.json().then(response => { $dispatch('data-loaded', response.items) }))
+        ">
+    <input
+        x-on:input.debounce="
+            results = index.filter(el => `${el.title} ${el.section}`.toLowerCase().includes($event.target.value.toLowerCase())).slice(0, 5);
+            open = true;"
+        class="bg-gray-900 w-full text-sm placeholder-gray-300 focus:placeholder-gray-600 text-gray-300 rounded-md focus:outline-none focus:bg-gray-100 focus:text-gray-800 px-3 py-3"
+        placeholder="Search"
+        type="text"
+        role="search"
+        name="Search">
+    <div x-cloak x-ref="dropdown" x-show-="open" x-on:click.away="open = false"class="absolute block w-full my-1">
+        <ul class="origin-top-right bg-white rounded-md shadow-md block divide-y divide-gray-300 overflow-hidden">
+            <template x-for="(item, index) in results" :key="index">
+                <li>
+                    <a x-on:click="open = false;" x-bind:href="item.url"
+                       class="block text-sm px-3 py-3 text-gray-700 hover:bg-gray-100">
+                        <span class="font-semibold block" x-text="item.section"></span>
+                        <span x-text="item.title"></span>
+                    </a>
+                </li>
+            </template>
+        </ul>
+    </div>
+</div>
+                                                    <div class="ml-4 flex items-center md:ml-6">
+                                            <div class="text-gray-200 font-light px-4 flex justify-center">
+                            <strong>master</strong>
+                                                            <span class="text-red-500 text-lg px-2">*</span>
+                                                        4ff7cd9
+                        </div>
+                                        <a href="https://github.com/StydeNet/enlighten"
+                       class="text-gray-100 hover:text-gray-500 focus:outline-none" aria-label="Notifications">
+                        <svg class="h-8 w-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <main class="flex-1 relative overflow-y-auto focus:outline-none bg-gray-900" tabindex="0">
+            <span id="top"></span>
+            <div class="pt-2 pb-6">
+                <div class="max-w-7xl mx-auto px-4">
+                    <ul class="flex space-x-2 mt-4">
+            <li>
+            <a href="/docs/areas/feature.html" class="text-gray-500 hover:text-gray-300 transition-all ease-in-out duration-100 flex items-center">
+                Feature
+                                <svg class="w-4 h-4 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+        </li>
+            <li>
+            <a href="/docs/feature-http-controllers-api-building-controller.html" class="text-gray-500 hover:text-gray-300 transition-all ease-in-out duration-100 flex items-center">
+                Building Controller
+                            </a>
+        </li>
+    </ul>
+                     <div class="flex items-center justify-center space-x-4">
+                        <h3 class="text-gray-100 text-xl mt-6 mb-4 pb-4 w-full border-b border-gray-700"><div class="flex">
+            <span class="text-success-500 items-center text-sm justify-center rounded-lg flex">
+            <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    </span>
+            Get all
+                    </div></h3>
+                    </div>
+                    <div x-data="{active: 'requests'}" class="flex flex-col h-full py-2 px-2">
+                    <div class="flex space-x-4 mb-4 bg-gray-800">
+                                                        <button
+                            x-on:click="active='requests'"
+                            x-bind:class="{
+                                'border-teal-300': (active === 'requests'),
+                                'border-gray-800': (active !== 'requests')
+                            }"
+                            class="mx-2 text-gray-100 px-2 py-3 border-b-2 text-sm focus:outline-none hover:border-teal-500 transition-all ease-in-out duration-100"
+                    >Requests</button>
+                                                                            <button
+                            x-on:click="active='database'"
+                            x-bind:class="{
+                                'border-teal-300': (active === 'database'),
+                                'border-gray-800': (active !== 'database')
+                            }"
+                            class="mx-2 text-gray-100 px-2 py-3 border-b-2 text-sm focus:outline-none hover:border-teal-500 transition-all ease-in-out duration-100"
+                    >Database</button>
+                                                                                    </div>
+        
+        <div class="w-full h-full">
+                                                 <div x-cloak x-show="active === 'requests' " class="h-full">
+                         <div x-data="{active: 'response_12'}" class="flex flex-col h-full">
+        
+        <div class="w-full h-full">
+                                                 <div x-cloak x-show="active === 'response_12' " class="h-full">
+                         <div class="grid md:grid-cols-2 space-y-8 md:space-y-0 md:space-x-6 w-full h-full">
+                        <div>
+                            <div class="bg-gray-800 rounded-md overflow-hidden">
+    <span class="block w-full bg-gray-700 px-4 py-2">
+        <h3 class="text-base text-gray-300">Request</h3>
+    </span>
+    <div>
+    
+    <table class="bg-gray-800 p-4 rounded-lg text-gray-100 my-4">
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">Method: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > GET</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">Route: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > api/buildings</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">Example: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > api/buildings</td>
+            </tr>
+            </table>
+</div>
+
+    
+    
+            <div>
+            <span class="block bg-gray-500 py-2 text-sm text-left text-gray-800 px-4 text-sm font-normal w-full"
+>Request Headers</span>
+    
+    <table class="bg-gray-800 p-4 rounded-lg text-gray-100 my-4">
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">host: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > localhost:8000</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">accept: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > application/json</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">user-agent: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > Symfony</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">content-type: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > application/json</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">accept-charset: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > ISO-8859-1,utf-8;q=0.7,*;q=0.7</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">content-length: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > 2</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">accept-language: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > en-us,en;q=0.5</td>
+            </tr>
+            </table>
+</div>
+</div>
+                            <span class="mb-8 w-full block"></span>
+
+                            <div class="bg-gray-800 rounded-md overflow-hidden">
+    <span class="block w-full bg-gray-700 px-4 py-2">
+        <h3 class="text-base text-gray-300">Response</h3>
+    </span>
+    <div class="p-4 space-x-4">
+        <span class="p-1 bg-success-200 text-success-700">200</span>
+        <span class="text-gray-100">JSON</span>
+    </div>
+
+            <div>
+            <span class="block bg-gray-500 py-2 text-sm text-left text-gray-800 px-4 text-sm font-normal w-full"
+>Response Headers</span>
+    
+    <table class="bg-gray-800 p-4 rounded-lg text-gray-100 my-4">
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">date: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > Fri, 29 Jan 2021 10:49:22 GMT</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">content-type: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > application/json</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">cache-control: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > no-cache, private</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">x-ratelimit-limit: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > 60</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">x-ratelimit-remaining: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > 48</td>
+            </tr>
+            </table>
+</div>
+</div>
+                            <span class="mb-8 w-full block"></span>
+
+                                                    </div>
+                        <div class="h-full relative">
+                                                            <div class="h-full">
+            <div >
+    <pre style="margin:0;"
+         class="h-full w-full bg-gray-300 rounded-lg overflow-hidden"
+    ><code class="language-json">[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Asociación Armas y Flia.&quot;,
+        &quot;address&quot;: &quot;Ronda Ona, 974, 17º C, 04878, Ponce del Puerto&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;Mayorga y Bernal&quot;,
+        &quot;address&quot;: &quot;Avinguda Eduardo, 922, 5º D, 23782, Las Barajas de San Pedro&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;Ramírez y Núñez&quot;,
+        &quot;address&quot;: &quot;Camino Arredondo, 68, Bajos, 73158, L&#039; Dávila de la Sierra&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;name&quot;: &quot;Patiño-Aparicio&quot;,
+        &quot;address&quot;: &quot;Camino Olivas, 55, 61º F, 95926, Villa Nieto del Bages&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;name&quot;: &quot;Lucas y Magaña&quot;,
+        &quot;address&quot;: &quot;Ronda Vera, 8, Ático 6º, 47895, Berríos de Arriba&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Echevarría-Luis e Hijo&quot;,
+        &quot;address&quot;: &quot;Plaça Rodrigo, 49, 14º B, 46518, Vall Partida del Puerto&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 7,
+        &quot;name&quot;: &quot;Asociación Raya SA&quot;,
+        &quot;address&quot;: &quot;Ronda Blanca, 79, Ático 5º, 75143, A Aguilera&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 8,
+        &quot;name&quot;: &quot;Solís-Nevárez&quot;,
+        &quot;address&quot;: &quot;Ronda Iker, 8, 2º A, 42792, Cuenca Baja&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 9,
+        &quot;name&quot;: &quot;Amador-González e Hijos&quot;,
+        &quot;address&quot;: &quot;Passeig Pereira, 863, 58º D, 52078, Vall Reyna&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 10,
+        &quot;name&quot;: &quot;Barrios de Escalante e Hijos&quot;,
+        &quot;address&quot;: &quot;Paseo Silvia, 1, 3º 5º, 55301, A Acosta&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 11,
+        &quot;name&quot;: &quot;Centro Abad-Moya&quot;,
+        &quot;address&quot;: &quot;Carrer Escamilla, 57, 2º 3º, 11624, Villa Jáquez&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:47.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:47.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 12,
+        &quot;name&quot;: &quot;Padrón de Luna&quot;,
+        &quot;address&quot;: &quot;Rúa Yáñez, 15, 22º A, 19789, Bañuelos del Penedès&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:48.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:48.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 13,
+        &quot;name&quot;: &quot;Global Castaño-Corona&quot;,
+        &quot;address&quot;: &quot;Rúa Juan José, 1, 19º E, 95500, Las Palomo&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:48.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:48.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 14,
+        &quot;name&quot;: &quot;Corporación Zaragoza-Quiroz&quot;,
+        &quot;address&quot;: &quot;Passeig Héctor, 81, 6º, 50212, Salcido de Arriba&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:37:48.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:37:48.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 16,
+        &quot;name&quot;: &quot;Centro Villegas-Robledo&quot;,
+        &quot;address&quot;: &quot;Carrer Ocasio, 80, 2º C, 86200, Vall Abrego Medio&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:38:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:38:41.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 17,
+        &quot;name&quot;: &quot;Global Baeza-Cervántez&quot;,
+        &quot;address&quot;: &quot;Travesía Manuela, 801, 3º 8º, 38982, Villa Muñiz Alta&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:38:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:38:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 18,
+        &quot;name&quot;: &quot;Adame, Mora y Juan y Asoc.&quot;,
+        &quot;address&quot;: &quot;Travessera Oliver, 310, 2º E, 31420, El Molina del Pozo&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:38:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:38:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 19,
+        &quot;name&quot;: &quot;Asociación Domínguez e Hija&quot;,
+        &quot;address&quot;: &quot;Ruela Mireia, 59, Entre suelo 2º, 09102, Martín del Puerto&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:38:42.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:38:42.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 21,
+        &quot;name&quot;: &quot;Gestora Otero-Manzanares&quot;,
+        &quot;address&quot;: &quot;Calle Alonso, 72, Ático 9º, 74017, Os Atencio del Barco&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:41:19.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:41:19.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 22,
+        &quot;name&quot;: &quot;Acuña y Rodríguez e Hija&quot;,
+        &quot;address&quot;: &quot;Rúa Montañez, 3, Bajo 3º, 92988, Las Holguín&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:41:20.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:41:20.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 23,
+        &quot;name&quot;: &quot;Corporación Cobo&quot;,
+        &quot;address&quot;: &quot;Avenida Ana, 613, 6º D, 58329, Os Páez&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:41:20.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:41:20.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 24,
+        &quot;name&quot;: &quot;Lomeli y Salcedo e Hijos&quot;,
+        &quot;address&quot;: &quot;Camino Ana María, 32, 3º 9º, 77198, La Linares&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:41:20.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:41:20.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 26,
+        &quot;name&quot;: &quot;Álvarez de Sáez e Hijos&quot;,
+        &quot;address&quot;: &quot;Passeig Guillermo, 606, 50º B, 83058, La Polo&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:42:50.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:42:50.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 27,
+        &quot;name&quot;: &quot;Salvador de Melgar e Hijos&quot;,
+        &quot;address&quot;: &quot;Passeig Gael, 6, Ático 4º, 22522, O Rojas&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:42:51.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:42:51.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 28,
+        &quot;name&quot;: &quot;Grupo Quezada-Castillo&quot;,
+        &quot;address&quot;: &quot;Avenida Eva, 81, 6º A, 18485, Cornejo de las Torres&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:42:51.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:42:51.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 29,
+        &quot;name&quot;: &quot;Olivárez y Valle e Hijo&quot;,
+        &quot;address&quot;: &quot;Ruela Eva, 8, 7º B, 79791, As Ordoñez&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T05:42:51.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T05:42:51.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 31,
+        &quot;name&quot;: &quot;Orozco y Rojas S. de H.&quot;,
+        &quot;address&quot;: &quot;Passeig Marco, 9, 18º 5º, 72028, O Fajardo Medio&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:27:18.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:27:18.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 32,
+        &quot;name&quot;: &quot;De la Cruz, Vanegas y Briseño SA&quot;,
+        &quot;address&quot;: &quot;Rúa Clemente, 56, 5º F, 59720, La Valles&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:27:19.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:27:19.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 33,
+        &quot;name&quot;: &quot;Puig y Puente e Hija&quot;,
+        &quot;address&quot;: &quot;Ruela Maestas, 96, 1º, 99766, Valero del Vallès&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:27:19.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:27:19.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 34,
+        &quot;name&quot;: &quot;Escobedo de Sauceda&quot;,
+        &quot;address&quot;: &quot;Avinguda Jesús, 8, Bajo 1º, 92768, San Maestas&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:27:19.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:27:19.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 36,
+        &quot;name&quot;: &quot;Carrasco-Reynoso&quot;,
+        &quot;address&quot;: &quot;Calle Elsa, 713, 6º, 15482, La Flórez&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:31:20.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:31:20.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 37,
+        &quot;name&quot;: &quot;Meraz y Cotto&quot;,
+        &quot;address&quot;: &quot;Travesía Antonia, 78, 74º D, 69029, Salvador del Vallès&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:31:21.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:31:21.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 38,
+        &quot;name&quot;: &quot;Reynoso-Lebrón e Hijos&quot;,
+        &quot;address&quot;: &quot;Praza Adriana, 205, 1º C, 08946, Hernando de las Torres&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:31:21.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:31:21.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 39,
+        &quot;name&quot;: &quot;Corporación Navas-Tovar&quot;,
+        &quot;address&quot;: &quot;Plaça Zarate, 6, 29º D, 79503, As Alanis Baja&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:31:21.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:31:21.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 41,
+        &quot;name&quot;: &quot;Corporación Valentín-Alcala&quot;,
+        &quot;address&quot;: &quot;Paseo Esther, 4, 79º 6º, 41029, Domínguez del Penedès&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:32:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:32:23.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 42,
+        &quot;name&quot;: &quot;Peláez y De la Torre e Hija&quot;,
+        &quot;address&quot;: &quot;Plaça Verónica, 1, 0º C, 43236, Esquivel Alta&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:32:24.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:32:24.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 43,
+        &quot;name&quot;: &quot;Empresa Montoya SRL&quot;,
+        &quot;address&quot;: &quot;Avenida Aguilera, 72, 9º C, 08959, Villa Venegas del Vallès&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:32:24.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:32:24.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 44,
+        &quot;name&quot;: &quot;Empresa Agosto&quot;,
+        &quot;address&quot;: &quot;Ronda Celia, 1, 78º A, 02879, Lebrón del Pozo&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:32:24.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:32:24.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 46,
+        &quot;name&quot;: &quot;Corona, Burgos y Rosa SA&quot;,
+        &quot;address&quot;: &quot;Carrer Barrera, 8, 4º B, 01114, La Baca de Lemos&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:38:12.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:38:12.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 47,
+        &quot;name&quot;: &quot;Centro Aguirre-Sáez&quot;,
+        &quot;address&quot;: &quot;Ruela Aparicio, 398, Entre suelo 5º, 19567, Guevara de Lemos&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:38:12.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:38:12.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 48,
+        &quot;name&quot;: &quot;Viera-Delatorre e Hija&quot;,
+        &quot;address&quot;: &quot;Camiño Bautista, 1, 18º C, 32490, Delgado de Arriba&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:38:12.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:38:12.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 49,
+        &quot;name&quot;: &quot;Gonzáles y Maldonado e Hija&quot;,
+        &quot;address&quot;: &quot;Avenida Asier, 34, 07º D, 55019, Cerda de Arriba&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:38:12.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:38:12.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 51,
+        &quot;name&quot;: &quot;Román-Valdés e Hijo&quot;,
+        &quot;address&quot;: &quot;Praza Rosa María, 477, 95º C, 81504, Terrazas del Vallès&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:41:30.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:41:30.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 52,
+        &quot;name&quot;: &quot;Vidal de Cadena&quot;,
+        &quot;address&quot;: &quot;Plaza Del Río, 190, 0º A, 68553, Villa Esteve&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:41:30.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:41:30.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 53,
+        &quot;name&quot;: &quot;Rivero-Guajardo&quot;,
+        &quot;address&quot;: &quot;Avenida Alcántar, 77, 0º B, 31513, L&#039; Agosto Alta&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:41:30.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:41:30.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 54,
+        &quot;name&quot;: &quot;Pozo-Cobo&quot;,
+        &quot;address&quot;: &quot;Plaza Rosa María, 2, Ático 6º, 79811, Los Palomo&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:41:30.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:41:30.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 56,
+        &quot;name&quot;: &quot;Cuesta de Piña&quot;,
+        &quot;address&quot;: &quot;Camiño Barraza, 8, 3º 9º, 93517, As Meraz&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:42:12.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:42:12.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 57,
+        &quot;name&quot;: &quot;Corporación Posada-Gutiérrez&quot;,
+        &quot;address&quot;: &quot;Travesía Nieves, 49, 6º F, 11950, San Mateos&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:42:13.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:42:13.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 58,
+        &quot;name&quot;: &quot;Nieves, Cotto y Cepeda y Asoc.&quot;,
+        &quot;address&quot;: &quot;Avenida Yeray, 49, 21º E, 85054, Caro del Vallès&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:42:13.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:42:13.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 59,
+        &quot;name&quot;: &quot;Corona-Caraballo&quot;,
+        &quot;address&quot;: &quot;Travesía Julia, 6, Bajos, 74517, A Ocampo&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:42:13.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:42:13.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 61,
+        &quot;name&quot;: &quot;Serrato de Fernández SA&quot;,
+        &quot;address&quot;: &quot;Camiño Carrión, 737, 2º F, 86465, A Casas&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:43:04.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:43:04.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 62,
+        &quot;name&quot;: &quot;Venegas y Muñiz&quot;,
+        &quot;address&quot;: &quot;Ruela Pablo, 615, 8º, 85592, Las Llamas Medio&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:43:05.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:43:05.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 63,
+        &quot;name&quot;: &quot;Menéndez de Aguilar SA&quot;,
+        &quot;address&quot;: &quot;Avinguda Pizarro, 597, Bajos, 57912, El Fonseca&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:43:05.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:43:05.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 64,
+        &quot;name&quot;: &quot;Canales y Carrasco&quot;,
+        &quot;address&quot;: &quot;Calle Olvera, 464, 1º 1º, 09063, San Heredia&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:43:05.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:43:05.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 66,
+        &quot;name&quot;: &quot;Viajes Baca&quot;,
+        &quot;address&quot;: &quot;Avinguda Curiel, 6, 0º D, 56193, Esteban Medio&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:45:07.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:45:07.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 67,
+        &quot;name&quot;: &quot;Delagarza-Godínez e Hija&quot;,
+        &quot;address&quot;: &quot;Travessera Dueñas, 97, Bajos, 94594, Vall Pineda Baja&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:45:07.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:45:07.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 68,
+        &quot;name&quot;: &quot;Flores de Vázquez y Flia.&quot;,
+        &quot;address&quot;: &quot;Passeig Aragón, 3, 48º F, 31113, L&#039; Griego&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:45:07.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:45:07.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 69,
+        &quot;name&quot;: &quot;Air Moral SA&quot;,
+        &quot;address&quot;: &quot;Plaza Alarcón, 2, 0º D, 11934, Loya de San Pedro&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:45:07.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:45:07.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    {
+        &quot;id&quot;: 71,
+        &quot;name&quot;: &quot;Pozo de Hernándes e Hijos&quot;,
+        &quot;address&quot;: &quot;Camino Luisa, 75, Bajo 4º, 36840, A Quiñónez&quot;,
+        &quot;created_at&quot;: &quot;2021-01-29T10:49:21.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-01-29T10:49:21.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    }
+]</code></pre>
+</div>    </div>
+                                                    </div>
+                    </div>
+                     </div>
+                                    </div>
+</div>
+                     </div>
+                                                                 <div x-cloak x-show="active === 'database' " class="h-full">
+                         <div x-data="{
+            open: 1
+        }">
+        <label x-on:click="open = !open"  class="flex items-center space-x-2 cursor-pointer text-gray-300 hover:text-gray-100 mb-6 mt-2 text-xl">
+            <span>Request Queries</span>
+            <svg x-cloak x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+            <svg x-cloak x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </label>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8" x-cloak x-show="open">
+                <div class="flex flex-col md:col-span-2 space-y-4">
+                                            <div class="bg-gray-800 rounded-md overflow-hidden">
+    <span class="block w-full bg-gray-700 px-4 py-2">
+        <h3 class="text-base text-gray-300">Time: 3.18</h3>
+    </span>
+    <div >
+    <pre style="margin:0;"
+         class="h-full w-full bg-gray-300 rounded-lg overflow-hidden"
+    ><code class="language-sql">select * from `buildings` where `buildings`.`deleted_at` is null</code></pre>
+</div>
+</div>
+                                    </div>
+                <div class="relative h-full">
+                    <div class="sticky top-0">
+                        <div class="bg-gray-800 rounded-md overflow-hidden">
+    <span class="block w-full bg-gray-700 px-4 py-2">
+        <h3 class="text-base text-gray-300">Request</h3>
+    </span>
+    <div>
+    
+    <table class="bg-gray-800 p-4 rounded-lg text-gray-100 my-4">
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">Method: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > GET</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">Route: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > api/buildings</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">Example: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > api/buildings</td>
+            </tr>
+            </table>
+</div>
+
+    
+    
+            <div>
+            <span class="block bg-gray-500 py-2 text-sm text-left text-gray-800 px-4 text-sm font-normal w-full"
+>Request Headers</span>
+    
+    <table class="bg-gray-800 p-4 rounded-lg text-gray-100 my-4">
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">host: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > localhost:8000</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">accept: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > application/json</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">user-agent: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > Symfony</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">content-type: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > application/json</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">accept-charset: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > ISO-8859-1,utf-8;q=0.7,*;q=0.7</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">content-length: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > 2</td>
+            </tr>
+                    <tr>
+                <td class="font-thin whitespace-no-wrap text-gray-200 px-4">accept-language: </td>
+                <td class="font-thin break-all text-teal-300 pr-4"
+                > en-us,en;q=0.5</td>
+            </tr>
+            </table>
+</div>
+</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+                     </div>
+                                                                </div>
+</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+    </div>
+    <script src="/docs/assets/js/build.js"></script>
+
+</body>
+</html>
+
