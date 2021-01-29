@@ -34,3 +34,9 @@ Se puede visualizar la documentación de la API en la siguiete URL:
 Para correr los test:
 
 	php artisan test
+
+## Postman Collection
+
+Para probar los endpoints desde la API, se puede usar esta colección (importarla como Link):
+
+	https://www.getpostman.com/collections/09eb4f3818261fb3ff75
