@@ -6,11 +6,10 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\Building;
+use Faker\Factory as Faker;
 
 class BuildingControllerTest extends TestCase
 {
-    use WithFaker;
-
     /**
      * Get all buildings test.
      *
@@ -37,9 +36,10 @@ class BuildingControllerTest extends TestCase
      */
     public function test_store()
     {
+        $faker = Faker::create();
         $building = [
-            'name' => $this->faker->company,
-            'address' => $this->faker->address,
+            'name' => $faker->company,
+            'address' => $faker->address,
         ];
 
         $response = $this->postJson('/api/buildings', $building);
@@ -81,10 +81,12 @@ class BuildingControllerTest extends TestCase
      */
     public function test_update()
     {
+        $faker = Faker::create();
+
         $building = Building::factory()->create();
         $fakeBuilding = [
-            'name' => $this->faker->company,
-            'address' => $this->faker->address,
+            'name' => $faker->company,
+            'address' => $faker->address,
         ];
 
         $response = $this->patchJson("/api/buildings/$building->id", $fakeBuilding);

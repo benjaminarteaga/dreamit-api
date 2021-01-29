@@ -6,6 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\Person;
+use Faker\Factory as Faker;
 
 class PersonControllerTest extends TestCase
 {
@@ -39,11 +40,13 @@ class PersonControllerTest extends TestCase
      */
     public function test_store()
     {
+        $faker = Faker::create();
+
         $person = [
-            'first_name' => $this->faker->firstName,
-            'last_name' => $this->faker->lastName,
+            'first_name' => $faker->firstName,
+            'last_name' => $faker->lastName,
             'person_role_id' => rand(1, 2),
-            'rut' => $this->faker->unique()->numberBetween(80000000, 279999999),
+            'rut' => $faker->unique()->numberBetween(80000000, 279999999),
         ];
 
         $response = $this->postJson('/api/persons', $person);
@@ -87,12 +90,14 @@ class PersonControllerTest extends TestCase
      */
     public function test_update()
     {
+        $faker = Faker::create();
+
         $person = Person::factory()->create();
         $fakePerson = [
-            'first_name' => $this->faker->firstName,
-            'last_name' => $this->faker->lastName,
+            'first_name' => $faker->firstName,
+            'last_name' => $faker->lastName,
             'person_role_id' => rand(1, 2),
-            'rut' => $this->faker->unique()->numberBetween(80000000, 279999999),
+            'rut' => $faker->unique()->numberBetween(80000000, 279999999),
         ];
 
         $response = $this->patchJson("/api/persons/$person->id", $fakePerson);

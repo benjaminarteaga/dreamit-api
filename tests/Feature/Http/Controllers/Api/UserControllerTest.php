@@ -8,6 +8,7 @@ use Tests\TestCase;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Faker\Factory as Faker;
 
 class UserControllerTest extends TestCase
 {
@@ -39,9 +40,11 @@ class UserControllerTest extends TestCase
      */
     public function test_store()
     {
+        $faker = Faker::create();
+
         $user = [
-            'name' => $this->faker->name,
-            'email' => $this->faker->unique()->safeEmail,
+            'name' => $faker->name,
+            'email' => $faker->unique()->safeEmail,
         ];
 
         $data = array_merge([
@@ -88,10 +91,12 @@ class UserControllerTest extends TestCase
      */
     public function test_update()
     {
+        $faker = Faker::create();
+
         $user = User::factory()->create();
         $fakeUser = [
-            'name' => $this->faker->name,
-            'email' => $this->faker->unique()->safeEmail,
+            'name' => $faker->name,
+            'email' => $faker->unique()->safeEmail,
         ];
 
         $response = $this->patchJson("/api/users/$user->id", $fakeUser);
