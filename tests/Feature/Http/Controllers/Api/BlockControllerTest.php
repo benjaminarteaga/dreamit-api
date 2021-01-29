@@ -51,7 +51,7 @@ class BlockControllerTest extends TestCase
 
         $response->assertJsonStructure([
                 'message',
-                'block' => ['person_id', 'building_id',]
+                'block' => ['person_id', 'building_id']
             ])
             ->assertJson(['block' => $data])
             ->assertStatus(200);

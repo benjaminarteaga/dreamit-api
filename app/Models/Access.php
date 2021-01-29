@@ -19,5 +19,6 @@ class Access extends Model
         'person_id',
         'building_id',
         'access_type_id',
+        'blocked',
     ];
 }

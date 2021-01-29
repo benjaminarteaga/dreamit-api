@@ -55,10 +55,18 @@ class AccessController extends Controller
         ]);
 
         if($block->exists()) {
+            $access = Access::create([
+                'person_id' => $person->id,
+                'building_id' => $request->building_id,
+                'access_type_id' => $request->access_type_id,
+                'blocked' => 1,
+            ]);
+
             return response()->json([
                 'message' => 'Esta persona tiene un bloqueo activo.',
-                'block' => $block->first()
-            ]);
+                'block' => $block->first(),
+                'access' => $access,
+            ], 422);
         }
 
         $access = Access::create([
