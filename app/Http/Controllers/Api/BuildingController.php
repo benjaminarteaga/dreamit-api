@@ -19,16 +19,6 @@ class BuildingController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -52,17 +42,6 @@ class BuildingController extends Controller
     public function show(Building $building)
     {
         return response()->json($building);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Building  $building
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Building $building)
-    {
-        //
     }
 
     /**

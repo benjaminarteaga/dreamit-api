@@ -19,16 +19,6 @@ class BlockController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -68,17 +58,6 @@ class BlockController extends Controller
     public function show(Block $block)
     {
         return response()->json($block);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Block  $block
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Block $block)
-    {
-        //
     }
 
     /**

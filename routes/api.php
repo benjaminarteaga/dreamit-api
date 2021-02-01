@@ -25,10 +25,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::apiResource('persons', PersonController::class);
 
-Route::resource('buildings', BuildingController::class);
+Route::apiResource('buildings', BuildingController::class);
 
-Route::resource('accesses', AccessController::class);
+Route::apiResource('accesses', AccessController::class);
 
-Route::resource('blocks', BlockController::class);
+Route::apiResource('blocks', BlockController::class);
 
-Route::resource('users', UserController::class);
+Route::apiResource('users', UserController::class);
